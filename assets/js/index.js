@@ -9,4 +9,4 @@ const sum = (...args) => {
   }, 0);
 };
 
-console.log(sum('text',5,15));
+//console.log(sum('text',5,15));

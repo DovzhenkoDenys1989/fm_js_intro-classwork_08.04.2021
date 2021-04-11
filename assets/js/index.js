@@ -1,14 +1,12 @@
 'use strict';
-// str.split(' ').join(' ')
 
-/* 
-  Для каждого слова сделать первую буквы большой.
-  String.prototype.split
-  String.prototype.toUpperCase
-  Array.prototype.join
-*/
-const str = "some string i need";
+const sum = (...args) => {
+  return args.reduce((accumulator, currentValue) => {
+    if(!Number.isFinite(currentValue)) {
+      throw new TypeError('Wrong argument type');
+    }
+    return accumulator + currentValue;
+  }, 0);
+};
 
-const capitalize = (str) => str.split(" ").map((word) => word[0].toUpperCase() + word.slice(1)).join(" ");
-
-console.log(capitalize(str));
+console.log(sum('text',5,15));
